@@ -16,6 +16,10 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
+    unitTestParams:
+        testArgs: -Dgroups=UnitTest
+        sonarScan: true
+        sonarProjectPrefix: $(SonarProjectPrefix)
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
